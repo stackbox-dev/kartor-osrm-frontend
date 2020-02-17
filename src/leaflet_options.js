@@ -16,11 +16,11 @@ var osmAttrData = dataTrans+' © <a rel="license" target="_blank" href="http://o
 
 var de = L.tileLayer('//{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
     format: 'image/png',
-    attribution: osmAttrImagery + ' | ' + osmAttrData
+    attribution: osmAttrImagery
   }),
   standard = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     format: 'image/png',
-    attribution: osmAttrImagery + ' | ' + osmAttrData
+    attribution: osmAttrImagery
   }),
 
   hiking = L.tileLayer('//tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {}),

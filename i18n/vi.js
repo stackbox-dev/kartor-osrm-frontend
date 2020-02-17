@@ -14,5 +14,5 @@ module.exports = {
   'Car': 'Car',
   'Foot': 'Foot',
   'About': '<a href=/about.html>About this service</a>',
-  'OpenStreetMap-contributors': 'những người đóng góp vào OpenStreetMap'
+  'OpenStreetMap contributors': 'những người đóng góp vào OpenStreetMap'
 };

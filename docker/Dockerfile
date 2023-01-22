@@ -10,6 +10,7 @@ ENV OSRM_LABEL='OSRM'
 # Copy package.json
 RUN mkdir -p /src
 COPY package.json /src
+COPY ./serve.conf.template /etc/nginx/templates/
 
 # Install app dependencies
 RUN apk add --no-cache sed nodejs npm && \
@@ -19,5 +20,6 @@ RUN apk add --no-cache sed nodejs npm && \
 # Create app directory
 COPY . /src
 WORKDIR /src
+
 
 RUN npm run build

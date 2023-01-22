@@ -1,11 +1,11 @@
-FROM alpine:3.5
+FROM asia-docker.pkg.dev/sbx-ci-cd/public/nginx:latest
 
 # Enables customized options using environment variables
 ENV OSRM_BACKEND='http://localhost:5000'
-ENV OSRM_CENTER='38.8995,-77.0269'
+ENV OSRM_CENTER='12.9716,77.5946'
 ENV OSRM_ZOOM='13'
 ENV OSRM_LANGUAGE='en'
-ENV OSRM_LABEL='Car (fastest)'
+ENV OSRM_LABEL='OSRM'
 
 # Copy package.json
 RUN mkdir -p /src
@@ -20,6 +20,4 @@ RUN apk add --no-cache sed nodejs && \
 COPY . /src
 WORKDIR /src
 
-# Run App
-EXPOSE 9966
-CMD ["npm", "start"]
+RUN npm run build

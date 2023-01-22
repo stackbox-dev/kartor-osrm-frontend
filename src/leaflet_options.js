@@ -14,7 +14,7 @@ var de = L.tileLayer('//{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 
 
 module.exports = {
   defaultState: {
-    center: L.latLng(50, 12),
+    center: L.latLng(12.9716, 77.5946),
     zoom: 7,
     waypoints: [],
     language: 'en',

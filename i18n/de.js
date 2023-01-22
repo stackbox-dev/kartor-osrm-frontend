@@ -16,5 +16,7 @@ module.exports = {
   'Bike': 'Fahrrad',
   'Car': 'Auto',
   'Foot': 'Fussgänger',
+  'Van': 'Van',
+  'Distance': 'Distance',
   'About': '<a href=/about.html>Informationen zu diesem Service</a>'
 };

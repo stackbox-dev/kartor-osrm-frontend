@@ -23,19 +23,19 @@ module.exports = {
     service: 1
   },
   services: [{
-    label: 'Car',
-    path: '/routed-car/route/v1',
-    debug: 'car',
+    label: 'Van',
+    path: '/api/route/v1',
+    debug: 'van',
   },
   {
     label: 'Bike',
-    path: '/routed-bike/route/v1',
+    path: '/api/route/v1',
     debug: 'bike',
   },
   {
-    label: 'Foot',
-    path: '/routed-foot/route/v1',
-    debug: 'foot',
+    label: 'Distance',
+    path: '/api/route/v1',
+    debug: 'distance',
   }],
   layer: [{
     'openstreetmap.de': de,

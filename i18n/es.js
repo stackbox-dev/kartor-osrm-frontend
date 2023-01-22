@@ -13,5 +13,6 @@ module.exports = {
   'Bike': 'Bicicleta',
   'Car': 'Coche',
   'Foot': 'Peatón',
+  'Van': 'Van',
   'About': '<a href=/about.html>Sobre este servicio</a>'
 };

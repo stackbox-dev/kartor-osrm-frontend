@@ -39,18 +39,18 @@ var State = L.Class.extend({
   set: function(options) {
     var self = this;
     L.setOptions(this, options);
+    var services = self._lrm.options.router.options.services;
     L.Util.setOptions(this._lrm.options.router, {
-        serviceUrl: this._lrm.options.router.options.services[this.options.service].path,
-        profile: this._lrm.options.router.options.services[this.options.service].debug
+        serviceUrl: services[this.options.service].path,
+        profile: services[this.options.service].debug
     });
     var profileSelector = L.DomUtil.get("profile-selector");
     profileSelector.selectedIndex = this.options.service;
-    var services = self._lrm.options.router.options.services;
     L.DomEvent.addListener(profileSelector, 'change', function () {
-	if (profileSelector.selectedIndex >= 0 &&
-			profileSelector.selectedIndex < services.length) {
-		self._tools.setProfile(services[profileSelector.selectedIndex]);
-	}
+	    if (profileSelector.selectedIndex >= 0 && profileSelector.selectedIndex < services.length) {
+        self.options.service = profileSelector.selectedIndex;
+        self.reload();
+	    }
     });
     if (this.options.service >= 0 &&
 			this.options.service < services.length) {

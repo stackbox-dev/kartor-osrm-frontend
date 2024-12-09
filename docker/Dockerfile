@@ -13,7 +13,7 @@ COPY package.json /src
 COPY ./serve.conf.template /etc/nginx/templates/
 
 # Install app dependencies
-RUN apk add --no-cache sed nodejs npm && \
+RUN apk add --no-cache sed nodejs npm git && \
     cd /src && \
     npm install
 
